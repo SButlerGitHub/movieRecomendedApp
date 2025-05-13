@@ -77,8 +77,7 @@ def get_recommendations():
             if preferred_directors:
                 query['director'] = {'$in': preferred_directors}
             
-            # We can't easily query for actors since they're in an array
-            # So we'll filter by genres and directors first, then sort by actor match
+            
             
             # Find matching movies
             matching_movies = list(movies_collection.find(query).limit(20))

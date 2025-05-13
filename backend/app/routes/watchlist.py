@@ -71,8 +71,7 @@ def add_to_watchlist(movie_id):
         )
         
         if result.modified_count == 0:
-            # Movie was already in watchlist or no update occurred
-            # Check if movie is already in watchlist
+            
             user = users_collection.find_one({
                 '_id': ObjectId(user_id),
                 'watchlist': movie_id
