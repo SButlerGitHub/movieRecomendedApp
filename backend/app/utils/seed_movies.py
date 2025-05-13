@@ -13,7 +13,7 @@ def seed_movies():
         db = client["film_recommendation"]
         movies_collection = db["movies"]
         
-        # Sample movie data with proper ObjectIds
+        
         sample_movies = [
             {
                 "_id": ObjectId(),
